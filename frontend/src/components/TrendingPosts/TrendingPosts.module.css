@@ -1,0 +1,193 @@
+.container {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 18px;
+    color: #ff7eb3;
+    font-weight: 800;
+}
+
+.postTrigger {
+    background: #ff7eb3;
+    color: #000;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.postList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.postCard {
+    background: #16161a;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cardTop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 11px;
+}
+
+.tagS {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+/* Suggestion Green */
+.tagR {
+    color: #ff7eb3;
+    font-weight: bold;
+}
+
+/* Recommendation Pink */
+.time {
+    color: #555;
+}
+
+.comments {
+    margin-left: auto;
+    color: #888;
+}
+
+.postTitle {
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.postDesc {
+    font-size: 13px;
+    color: #8e8e93;
+    margin-bottom: 20px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.miniAvatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ff7eb3;
+    overflow: hidden;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.miniAvatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 13px;
+    color: #ccc;
+    font-weight: 600;
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.modalContent {
+    background: #1a1a1f;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+}
+
+.modalInput,
+.modalTextarea {
+    width: 100%;
+    background: #0b0b0f;
+    border: 1px solid #333;
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.modalTextarea {
+    height: 100px;
+    resize: none;
+}
+
+.submitBtn {
+    background: #ff7eb3;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.miniAvatar {
+  width: 32px;  /* Fixed size */
+  height: 32px; /* Fixed size */
+  border-radius: 50%;
+  border: 2px solid #ff7eb3; /* Pink border from your screen */
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevents the circle from squashing */
+  overflow: hidden;
+}
+
+.miniAvatar span {
+  font-size: 14px;
+  font-weight: 800;
+  color: #ff7eb3;
+}
+
+.name {
+  font-size: 13px;
+  color: #ccc;
+  font-weight: 600;
+}
+
+.time {
+  color: #555;
+  font-size: 11px;
+  margin-left: 5px;
+}

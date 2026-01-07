@@ -1,0 +1,102 @@
+.pageWrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #050505;
+  background: radial-gradient(circle at top right, #001f3f, #050505);
+}
+
+.loginContainer {
+  display: flex;
+  width: 900px;
+  height: 600px;
+  background: rgba(10, 10, 15, 0.8);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 50px rgba(0, 112, 243, 0.2);
+}
+
+/* Left Section: Form */
+.formSection {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formSection h1 { font-size: 32px; margin-bottom: 5px; color: white; }
+.formSection p { font-size: 13px; color: #888; margin-bottom: 30px; }
+.formSection p a { color: #00d1ff; text-decoration: none; }
+
+.inputGroup { margin-bottom: 20px; }
+.inputGroup label { display: block; color: white; font-size: 14px; margin-bottom: 8px; }
+.inputGroup input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #fff;
+  color: #000;
+  outline: none;
+}
+
+.signInBtn {
+  background: #0056ff;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.signInBtn:hover { background: #0041c2; }
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px 0;
+  color: #555;
+  font-size: 11px;
+}
+.divider::before, .divider::after {
+  content: ''; flex: 1; border-bottom: 1px solid #333; margin: 0 10px;
+}
+
+.socialBtn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid #333;
+  background: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+/* Right Section: Graphic */
+.graphicSection {
+  flex: 1;
+  background: linear-gradient(135deg, #001122 0%, #003366 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.shieldGraphic {
+  width: 200px;
+  height: 250px;
+  background: url('/shield-icon.png') no-repeat center; /* Add a shield icon here */
+  background-size: contain;
+  filter: drop-shadow(0 0 20px #00d1ff);
+}

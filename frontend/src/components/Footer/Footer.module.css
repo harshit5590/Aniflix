@@ -1,0 +1,186 @@
+.footer {
+    background: #050a14;
+    /* Deep dark navy like screenshot */
+    padding: 50px 0 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* --- Top Bar (Alphabet) --- */
+.topBar {
+    margin-bottom: 50px;
+}
+
+.langToggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #8e8e93;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.switch {
+    width: 35px;
+    height: 18px;
+    background: #333;
+    border-radius: 20px;
+    position: relative;
+}
+
+.switch::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.azLabel {
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.alphabetList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.azBtn {
+    background: #1a1a1f;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    min-width: 35px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.azBtn:hover {
+    background: #ffb400;
+    /* Yellow hover like your theme */
+    color: #000;
+}
+
+/* --- Middle Section --- */
+.middleSection {
+    display: flex;
+    gap: -40px;
+    margin-bottom: 40px;
+    position:sticky;
+}
+.linkCol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    margin-left: 200px;
+}
+#link{
+    margin-left: 200px;
+}
+
+.brandCol {
+    flex: 1.5;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.copy {
+    font-size: 13px;
+    color: #8e8e93;
+    margin-bottom: 20px;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+}
+
+.socialIcon {
+    font-size: 12px;
+    color: #8e8e93;
+    background: #1a1a1f;
+    padding: 5px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.linkCol h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.linkCol a {
+    display: block;
+    color: #8e8e93;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.linkCol a:hover {
+    color: #ffb400;
+}
+
+/* --- Luffy Graphic --- */
+.characterBox {
+    position: absolute;
+    /* right: -50px; */
+    left: 71vw;
+    bottom: -40px;
+    width: 250px;
+    pointer-events: none;
+    /* Stops image from blocking link clicks */
+}
+
+.luffyImg {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+}
+
+/* --- Bottom Bar --- */
+.bottomBar {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    font-size: 11px;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .middleSection {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .characterBox {
+        display: none;
+    }
+
+    /* Hide Luffy on mobile to save space */
+}

@@ -1,0 +1,54 @@
+.watchWrapper {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.videoBox {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.placeholderVideo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #ffb400;
+  font-weight: bold;
+}
+
+.epSidebar {
+  background: #1a1a1f;
+  border-radius: 12px;
+  padding: 20px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.epItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333;
+  padding: 12px;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.epItem:hover { background: #222; }
+.active { background: #333 !important; border-left: 4px solid #ffb400; }
+
+.num { color: #ffb400; font-weight: bold; font-size: 18px; }
+.epText p { margin: 0; font-size: 14px; }
+.epText span { font-size: 10px; color: #888; }

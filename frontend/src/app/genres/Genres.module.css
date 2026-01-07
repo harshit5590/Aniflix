@@ -1,0 +1,95 @@
+.container {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.genreHeader {
+  margin-bottom: 40px;
+}
+
+.genreHeader h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  border-left: 5px solid var(--accent);
+  padding-left: 15px;
+  color: #fff;
+}
+
+/* Genre Pills Navigation */
+.genreList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.genreLink {
+  padding: 8px 20px;
+  background: #1a1a1f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  color: var(--text-dim);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.genreLink:hover {
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Active State for the selected Genre */
+.active {
+  background: var(--accent) !important;
+  color: #000 !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 15px rgba(255, 180, 0, 0.4);
+}
+
+/* Results Grid */
+.resultsSection {
+  margin-top: 50px;
+}
+
+.resultCount {
+  color: var(--text-dim);
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.animeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+/* Empty State */
+.noResults {
+  text-align: center;
+  padding: 100px 0;
+  color: var(--text-dim);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .animeGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .genreHeader h1 {
+    font-size: 22px;
+  }
+}

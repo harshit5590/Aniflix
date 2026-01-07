@@ -1,0 +1,69 @@
+.settingsWrapper {
+  padding: 60px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.settingsCard {
+  background: #16161a;
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.settingsCard h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inputGroup {
+  margin-bottom: 25px;
+}
+
+.inputGroup label {
+  display: block;
+  color: #8e8e93;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 14px;
+  background: #0b0b0f;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.inputGroup input:focus {
+  border-color: #ffb400;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 180, 0, 0.1);
+}
+
+.saveBtn {
+  width: 100%;
+  padding: 15px;
+  background: #ffb400;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.saveBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 180, 0, 0.2);
+}

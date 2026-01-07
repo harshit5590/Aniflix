@@ -1,0 +1,58 @@
+/* Reuse most of your Login.module.css, add these for the two-column row */
+.pageWrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top right, #001f3f, #050505);
+}
+
+.loginContainer {
+  display: flex;
+  width: 1000px; /* Slightly wider for register */
+  background: rgba(10, 10, 15, 0.9);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.formSection { flex: 1.2; padding: 40px; }
+.graphicSection { flex: 0.8; background: #001122; display: flex; align-items: center; justify-content: center; border-left: 1px solid #333; }
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.inputGroup { margin-bottom: 15px; width: 100%; }
+.inputGroup label { display: block; color: white; font-size: 12px; margin-bottom: 5px; }
+.inputGroup input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: white;
+  color: black;
+}
+
+.signInBtn {
+  width: 100%;
+  background: #0056ff;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.errorMessage {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff4444;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  border: 1px solid red;
+}

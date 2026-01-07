@@ -1,0 +1,57 @@
+.hero {
+  position: relative;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+}
+
+.heroPlaceholder {
+  width: 100%;
+  height: 500px;
+  background: #16161a;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8e8e93;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.banner { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: 1s ease-in-out; }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #0b0b0f 20%, transparent 80%);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 2 LINE SYNOPSIS TRICK */
+.synopsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Forces exactly 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #8e8e93;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.watchBtn { background: #ffb400; color: #000; padding: 12px 35px; border-radius: 50px; font-weight: 800; text-decoration: none; }
+.listBtn { background: rgba(255,255,255,0.1); color: #fff; padding: 12px 25px; border-radius: 50px; border: none; margin-left: 15px; cursor: pointer; }
+
+.dots { display: flex; gap: 8px; margin-top: 30px; }
+.dot { width: 8px; height: 8px; background: #333; border-radius: 50%; }
+.activeDot { width: 25px; background: #ffb400; border-radius: 10px; }
+
+
+.badges{
+  display: flex;
+  gap: 10px;
+}

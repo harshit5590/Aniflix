@@ -1,0 +1,100 @@
+.card {
+  position: relative;
+  background: #1a1a1f;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* THE SLEEK CIRCULAR BUTTON */
+.addBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px); /* Modern blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.addBtn:hover {
+  transform: scale(1.2);
+  background: #ffb400; /* Yellow */
+  color: #000;
+  border-color: #ffb400;
+  box-shadow: 0 0 15px rgba(255, 180, 0, 0.5);
+}
+
+/* Style when anime is already added */
+.added {
+  background: #ffb400;
+  color: #000;
+  border-color: #ffb400;
+}
+
+/* PORTRAIT ASPECT RATIO (Fixed "Big Card" issue) */
+.posterContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background: #000;
+}
+
+.posterImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ratingBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ffb400;
+  color: #000;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 3px 8px;
+  border-radius: 5px;
+  z-index: 5;
+}
+
+.info {
+  padding: 10px;
+}
+
+.title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8e8e93;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.type {
+  color: #ffb400;
+  font-weight: bold;
+}

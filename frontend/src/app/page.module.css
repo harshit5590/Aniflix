@@ -1,0 +1,170 @@
+.mainWrapper {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.heroSection {
+  margin-bottom: 40px;
+}
+
+/* 2-Column Layout */
+.contentLayout {
+  display: grid;
+  grid-template-columns: 1fr 300px; /* Left takes space, Right is fixed */
+  gap: 40px;
+}
+
+/* Left Grid Section */
+.gridSection {
+  width: 100%;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  color: var(--accent);
+}
+
+.viewAll {
+  color: var(--text-dim);
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.viewAll:hover {
+  color: var(--accent);
+}
+
+/* The Grid itself */
+.animeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+/* Sidebar Section */
+.sidebarSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.promoBanner {
+  background: linear-gradient(135deg, #ffb400 0%, #ff8800 100%);
+  padding: 25px;
+  border-radius: 15px;
+  color: #000;
+  text-align: center;
+}
+
+.promoBanner h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.promoBanner p {
+  font-size: 11px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.promoBtn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.errorText {
+  color: #ff4444;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .contentLayout {
+    grid-template-columns: 1fr; /* Stack sidebar on mobile */
+  }
+  
+  .sidebarSection {
+    order: -1; /* Put trending on top for mobile if preferred, or leave it */
+  }
+}
+
+@media (max-width: 600px) {
+  .animeGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on phones */
+    gap: 15px;
+  }
+}
+
+.homeLayout {
+  display: grid;
+  grid-template-columns: 1fr 300px; /* Grid on left, Trending on right */
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.categoryTitle {
+  font-size: 22px;
+  border-left: 5px solid #ffb400; /* Yellow accent line */
+  padding-left: 15px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  /* minmax(160px, 1fr) means: minimum width 160px, then fill the row */
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.categoryTitle {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.categoryTitle::before {
+  content: "";
+  width: 4px;
+  height: 20px;
+  background: #ffb400;
+  border-radius: 10px;
+}

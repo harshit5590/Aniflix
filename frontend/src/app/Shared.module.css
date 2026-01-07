@@ -1,0 +1,42 @@
+.card {
+    background: #16161a;
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 50px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.avatarBig {
+    width: 120px;
+    height: 120px;
+    background: #ffb400;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 900;
+    color: #000;
+    border: 4px solid #ffb400;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.infoBox {
+    background: #1a1a1f;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.infoBox span {
+    color: #ffb400;
+    font-size: 12px;
+    font-weight: bold;
+}

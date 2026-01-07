@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* This ensures the preloaded font is applied everywhere immediately */
+  font-family: inherit; 
+}
+
+:root {
+  --bg-dark: #0b0b0f;
+  --bg-card: #1a1a1f;
+  --accent: #ffb400; /* Yellow Glow */
+  --text-main: #ffffff;
+  --text-dim: #8e8e93;
+}
+
+body {
+  background-color: #0b0b0f;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  /* Use the font variable here if you defined one in layout.tsx */
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Recreating the glow from your screenshot */
+.glow-button {
+  background: var(--accent);
+  color: black;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(255, 180, 0, 0.3);
+}
+
+.glow-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 180, 0, 0.5);
+}
