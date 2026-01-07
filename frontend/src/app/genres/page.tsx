@@ -20,9 +20,9 @@ export default async function GenresPage({ searchParams }: Props) {
   const selectedGenre = genre || 'Action';
 
   // 1. Extract Unique Genres from the 390 items
-  const allGenres: string[] = Array.from(
-    new Set(allAnimes.flatMap((a: any) => a.genres))
-  ).sort();
+ const allGenres: string[] = Array.from(
+  new Set(allAnimes?.flatMap((a: any) => a.genres || []))
+).sort() as string[];
 
   // 2. Filter anime
   const filtered = allAnimes.filter((a: any) => 
