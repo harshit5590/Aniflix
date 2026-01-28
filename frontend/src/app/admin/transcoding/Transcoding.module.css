@@ -1,0 +1,179 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #8e8e93;
+}
+
+.stats span {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.jobList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Job Card --- */
+.jobCard {
+  background: #16161a;
+  border-radius: 16px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.jobInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.animeMeta h3 {
+  font-size: 18px;
+  margin: 0 0 5px 0;
+  color: #fff;
+}
+
+.animeMeta span {
+  font-size: 13px;
+  color: #8e8e93;
+}
+
+/* --- Status Badges --- */
+.statusBadge {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.queued { background: rgba(142, 142, 147, 0.1); color: #8e8e93; border: 1px solid #8e8e9333; }
+.active { background: rgba(0, 209, 255, 0.1); color: #00d1ff; border: 1px solid #00d1ff33; box-shadow: 0 0 10px rgba(0, 209, 255, 0.1); }
+.completed { background: rgba(0, 255, 136, 0.1); color: #00ff88; border: 1px solid #00ff8833; }
+.failed { background: rgba(255, 68, 68, 0.1); color: #ff4444; border: 1px solid #ff444433; }
+
+/* --- Progress Bar --- */
+.progressSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 8px;
+  background: #0b0b0f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #00d1ff, #00ff88);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px rgba(0, 209, 255, 0.3);
+}
+
+.progressText {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  min-width: 40px;
+}
+
+/* --- Logs --- */
+.logPreview {
+  background: #000;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #222;
+}
+
+.logPreview code {
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  color: #00ff88;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Actions --- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.retryBtn, .cancelBtn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+  border: none;
+}
+
+.retryBtn { background: #ffb400; color: #000; }
+.retryBtn:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(255, 180, 0, 0.3); }
+
+.cancelBtn { background: rgba(255, 255, 255, 0.05); color: #ff4444; border: 1px solid rgba(255, 68, 68, 0.2); }
+.cancelBtn:hover { background: rgba(255, 68, 68, 0.1); }
+
+.time {
+  margin-left: auto;
+  font-size: 11px;
+  color: #555;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px;
+  background: #16161a;
+  border-radius: 16px;
+  border: 1px dashed #333;
+  color: #8e8e93;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  color: #8e8e93;
+}

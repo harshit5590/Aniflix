@@ -1,0 +1,84 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.header { margin-bottom: 40px; }
+.header h1 { font-size: 28px; font-weight: 800; margin: 0; }
+.header p { color: #8e8e93; margin-top: 8px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #16161a;
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.statusDot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* --- Health States --- */
+.ok { border-color: rgba(0, 255, 136, 0.2); }
+.ok .statusDot { background: #00ff88; color: #00ff88; }
+.ok .progressFill { background: #00ff88; }
+
+.degraded { border-color: rgba(255, 180, 0, 0.2); }
+.degraded .statusDot { background: #ffb400; color: #ffb400; }
+.degraded .progressFill { background: #ffb400; }
+
+.down { border-color: rgba(255, 68, 68, 0.2); }
+.down .statusDot { background: #ff4444; color: #ff4444; }
+.down .progressFill { background: #ff4444; }
+
+.statRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.label { color: #8e8e93; }
+.value { font-weight: 700; }
+
+.progressBar {
+  height: 6px;
+  background: #0b0b0f;
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  transition: width 1s ease-in-out;
+}
+
+.errorBox {
+  margin-top: 25px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 12px;
+  border-left: 3px solid #ff4444;
+}
+
+.errorBox strong { display: block; color: #ff4444; margin-bottom: 5px; }
+.errorBox p { color: #ccc; margin: 0; }

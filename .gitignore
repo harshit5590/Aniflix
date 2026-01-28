@@ -1,0 +1,17 @@
+# Dependency folders
+node_modules/
+dist/
+.next/
+
+# Environment variables (Security!)
+.env
+.env.local
+
+# Large video/stream files
+storage/
+public/streams/
+public/uploads/avatars/*
+
+# OS files
+.DS_Store
+Thumbs.db

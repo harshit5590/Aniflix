@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Anime {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String?
+  createdAt   DateTime @default(now())
+}
+
+model Episode {
+  id            String          @id @default(auto()) @map("_id") @db.ObjectId
+  animeId       String          @db.ObjectId
+  episodeNumber Int
+  title         String?
+  sources       EpisodeSource[]
+}
+
+model EpisodeSource {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  episodeId   String   @db.ObjectId
+  episode     Episode  @relation(fields: [episodeId], references: [id])
+  provider    String   // "TERABOX" or "GDRIVE"
+  language    String   // "SUB" or "DUB"
+  sourceUrl   String   @unique
+  status      String   @default("PENDING")
+}
+model SystemControl {
+  // Map the 'key' string to MongoDB's internal _id field
+  key       String   @id @map("_id") 
+  value     Boolean  @default(false)
+  updatedAt DateTime @updatedAt
+}
