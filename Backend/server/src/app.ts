@@ -17,6 +17,8 @@ import adminTranscoding from './routes/adminTranscoding';
 import './server/transcoding/worker'; 
 import { logger } from './server/observability/logging';
 import adminStorageRoutes from './routes/adminStorageRoutes'; // 1. Import
+import adminAnimeRoutes from './routes/adminAnimeRoutes'; // 2. Import
+import adminUserRoutes from './routes/adminUserRoutes'; // 3. Import
 
 
 
@@ -48,7 +50,9 @@ app.use('/api/auth', authLimiter);
 app.use('/api/admin/storage', adminStorageRoutes);
 app.use('/api/stream/mp4', streamLimiter);
 app.use('/api/stream/secure', streamLimiter);
+app.use('/api/admin/anime', adminAnimeRoutes);
 app.use('/api/anime', animeRoutes);
+app.use('/api/admin/users', adminUserRoutes);
 app.use('/api/admin/transcoding', adminTranscoding);
 app.use('/api/stream/mp4', streamMp4);
 app.use('/api/episode', episodeStream);

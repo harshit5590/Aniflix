@@ -7,6 +7,7 @@ import Comments from '@/components/Comments/Comments';
 import TrendingPosts from '@/components/TrendingPosts/TrendingPosts';
 import Footer from '@/components/Footer/Footer';
 import { BASE_URL } from '@/lib/utils'; // Import the constant
+import Schedule from '@/components/Schedule/Schedule';
 
 
 export const dynamic = 'force-dynamic';
@@ -27,7 +28,7 @@ export default async function HomePage() {
 
   if (allAnimes.length === 0) {
     return (
-      <div className="container" style={{textAlign:'center', padding:'100px', color:'#fff'}}>
+      <div className="container" style={{ textAlign: 'center', padding: '100px', color: '#fff' }}>
         <h1>Backend Offline</h1>
         <p>Please start your Node.js server on port 5000</p>
       </div>
@@ -84,14 +85,14 @@ export default async function HomePage() {
           </section>
 
           {/* CATEGORY: MOVIES */}
-          {/* <section className={styles.section}>
+          <section className={styles.section}>
             <h2 className={styles.categoryTitle}>🎬 Anime Movies</h2>
             <div className={styles.grid}>
               {movies.map((anime: any) => (
                 <AnimeCard key={anime._id} anime={anime} />
               ))}
             </div>
-          </section> */}
+          </section>
 
           {/* FULL LIBRARY */}
           {/* <section className={styles.section}>
@@ -102,6 +103,7 @@ export default async function HomePage() {
               ))}
             </div>
           </section> */}
+          <Schedule />
 
         </div>
 

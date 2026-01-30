@@ -1,0 +1,191 @@
+.wrapper {
+  margin: 80px 0;
+  background: rgba(22, 22, 26, 0.5);
+  border-radius: 24px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+}
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Day Picker Pills */
+.dayPicker {
+  display: flex;
+  gap: 10px;
+  background: #0b0b0f;
+  padding: 6px;
+  border-radius: 50px;
+  border: 1px solid #222;
+}
+
+.dayBtn {
+  background: transparent;
+  border: none;
+  color: #888;
+  padding: 8px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.dayBtn:hover { color: #fff; }
+
+.active {
+  background: #ffb400; /* Aniflix Gold */
+  color: #000;
+  box-shadow: 0 4px 15px rgba(255, 180, 0, 0.3);
+}
+
+/* Timeline Layout */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.releaseItem {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 15px 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.releaseItem:hover {
+  background: rgba(255, 180, 0, 0.05);
+  border-color: rgba(255, 180, 0, 0.2);
+  transform: translateX(10px);
+}
+
+.timeBox {
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffb400;
+  width: 80px;
+}
+
+.infoBox {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  border-left: 2px solid #333;
+}
+
+.animeTitle {
+  font-size: 16px;
+  color: #fff;
+  margin: 0;
+  font-weight: 600;
+}
+
+.epBadge {
+  background: rgba(255, 255, 255, 0.05);
+  color: #8e8e93;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.releaseItem:hover .epBadge {
+  background: #ffb400;
+  color: #000;
+}
+
+/* Status Indicator Dot */
+.statusGlow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #ffb400;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.releaseItem:hover .statusGlow {
+  opacity: 1;
+  box-shadow: 0 0 15px #ffb400;
+}
+
+.empty { color: #555; text-align: center; padding: 40px; }
+
+@media (max-width: 768px) {
+  .header { flex-direction: column; align-items: flex-start; }
+  .dayPicker { width: 100%; overflow-x: auto; }
+  .infoBox { flex-direction: column; align-items: flex-start; gap: 5px; }
+  .timeBox { font-size: 14px; width: 60px; }
+}
+.subtitle {
+  color: #555;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.badgeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.liveIndicator {
+  font-size: 9px;
+  text-transform: uppercase;
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 900;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+.nameSection {
+  flex: 1;
+}
+.timeline {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.timeline::-webkit-scrollbar {
+  width: 4px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+/* Hover effect for the whole row */
+.releaseItem:hover .animeTitle {
+  color: #ffb400;
+  transform: translateX(5px);
+}

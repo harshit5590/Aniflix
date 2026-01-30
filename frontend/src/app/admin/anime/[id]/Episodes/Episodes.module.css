@@ -1,0 +1,58 @@
+.container { padding: 40px 20px; max-width: 1200px; margin: 0 auto; color: #fff; }
+
+.header { margin-bottom: 40px; }
+.backBtn { color: #8e8e93; text-decoration: none; font-size: 14px; margin-bottom: 10px; display: block; }
+.backBtn:hover { color: #ffb400; }
+
+.addSection {
+  background: #16161a;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 50px;
+}
+
+.addForm { display: flex; gap: 15px; margin-top: 20px; }
+.addForm input {
+  background: #0b0b0f; border: 1px solid #333; color: #fff;
+  padding: 12px; border-radius: 8px; outline: none;
+}
+.addForm input[type="number"] { width: 100px; }
+.addForm input[type="text"] { flex: 1; }
+
+.submitBtn {
+  background: #ffb400; color: #000; border: none;
+  padding: 0 25px; border-radius: 8px; font-weight: 800; cursor: pointer;
+}
+
+/* --- EPISODE GRID --- */
+.epGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.epCard {
+  background: #16161a;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s;
+}
+
+.epCard:hover { border-color: #00d1ff; transform: translateY(-5px); }
+
+.cardHeader { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+.epLabel { font-size: 10px; color: #8e8e93; font-weight: 800; letter-spacing: 1px; }
+.epNumber { font-size: 24px; font-weight: 900; color: #ffb400; }
+
+.epTitle { font-size: 14px; color: #ccc; margin-bottom: 20px; height: 40px; overflow: hidden; }
+
+.manageLinksBtn {
+  display: block; width: 100%; text-align: center;
+  background: rgba(0, 209, 255, 0.1); color: #00d1ff;
+  padding: 10px; border-radius: 8px; text-decoration: none;
+  font-size: 13px; font-weight: 700; border: 1px solid rgba(0, 209, 255, 0.2);
+}
+
+.manageLinksBtn:hover { background: #00d1ff; color: #000; } 
