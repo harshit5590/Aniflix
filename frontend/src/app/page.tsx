@@ -99,7 +99,7 @@ export default async function HomePage() {
             <h2 className={styles.categoryTitle}>More Anime ({allAnimes.length})</h2>
             <div className={styles.grid}>
               {fullLibrary.map((anime: any) => (
-                <AnimeCard key={anime._id} anime={anime} />
+                <AnimeCard key={anime._id} anime={anime}   />
               ))}
             </div>
           </section> */}
