@@ -92,3 +92,10 @@
     font-size: 20px;
   }
 }
+/* Add to both files */
+@media (max-width: 600px) {
+  .animeGrid, .grid {
+    grid-template-columns: repeat(2, 1fr); /* Forces exactly 2 cards per row */
+    gap: 10px;
+  }
+}

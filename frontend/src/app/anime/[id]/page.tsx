@@ -8,11 +8,10 @@ import { BASE_URL } from '@/lib/utils';
 type Props = { params: Promise<{ id: string }> };
 
 export default function AnimeDetailPage({ params }: Props) {
-  // 1. UNWRAP params at the very top
+  // 1. Unwrap the ID from params
   const resolvedParams = use(params);
   const id = resolvedParams.id;
 
-  // 2. DECLARE all hooks (useState/useEffect) at the top level
   const [anime, setAnime] = useState<any>(null);
   const [related, setRelated] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -21,21 +20,25 @@ export default function AnimeDetailPage({ params }: Props) {
     const fetchData = async () => {
       try {
         setLoading(true);
-        // Fetch current anime
-        const animeRes = await fetch(`${BASE_URL}/api/anime/${id}`);
-        const animeData = await animeRes.json();
+
+        // 2. Get the token from localStorage
+        const token = localStorage.getItem('token');
+
+        // 3. Fetch current anime by ID (Corrected URL and Variables)
+        const res = await fetch(`${BASE_URL}/api/anime/${id}`, { cache: 'no-store' });
+
+        const animeData = await res.json(); // Use 'res' here
         setAnime(animeData);
 
-        // Fetch recommendations based on the first genre of the current anime
+        // 4. Fetch recommendations based on the first genre
         const genre = animeData.genres?.[0] || "Action";
         const allRes = await fetch(`${BASE_URL}/api/anime`);
         const allData = await allRes.json();
-        
-        // Filter: same genre, but not the current anime
+
         const recommended = allData
           .filter((item: any) => item.genres.includes(genre) && item._id !== id)
           .slice(0, 6);
-          
+
         setRelated(recommended);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -47,13 +50,8 @@ export default function AnimeDetailPage({ params }: Props) {
     fetchData();
   }, [id]);
 
-  // 3. CONDITIONAL RETURNS must come AFTER all hooks are declared
   if (loading || !anime) {
-    return (
-      <div className="container" style={{ color: '#fff', paddingTop: '100px', textAlign: 'center' }}>
-        <h2>Loading Anime Details...</h2>
-      </div>
-    );
+    return <div className="container" style={{ paddingTop: '100px', textAlign: 'center' }}><h2>Loading...</h2></div>;
   }
 
   return (

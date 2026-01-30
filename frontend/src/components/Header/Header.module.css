@@ -339,3 +339,19 @@
   object-fit: cover; /* This prevents the image from stretching */
   display: block;
 }
+@media (max-width: 900px) {
+  .nav a {
+    font-size: 18px; /* Bigger text for mobile fingers */
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    display: block;
+    text-align: left;
+  }
+
+  .showMobile {
+    display: flex;
+    padding-top: 50px; /* Space for the logo */
+    height: 100vh; /* Full screen height drawer */
+  }
+}

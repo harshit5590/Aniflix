@@ -16,6 +16,9 @@ import { accessLogger } from './server/observability/securityAudit';
 import adminTranscoding from './routes/adminTranscoding';
 import './server/transcoding/worker'; 
 import { logger } from './server/observability/logging';
+import adminStorageRoutes from './routes/adminStorageRoutes'; // 1. Import
+
+
 
 
 dotenv.config();
@@ -25,8 +28,7 @@ const app = express();
 // app.use(cors());
 app.use(express.json());
 app.use(cors({
-  origin: ["http://localhost:3000", "http://127.0.0.1:3000"], // Allow your frontend
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: "*", // Allows your tunnel to talk to the backend
   credentials: true
 }));
 
@@ -43,6 +45,7 @@ app.use(accessLogger);
 app.use('/api/auth', authLimiter);
 
 // 3. Protect Streaming Endpoints
+app.use('/api/admin/storage', adminStorageRoutes);
 app.use('/api/stream/mp4', streamLimiter);
 app.use('/api/stream/secure', streamLimiter);
 app.use('/api/anime', animeRoutes);

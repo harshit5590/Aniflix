@@ -1,0 +1,64 @@
+.container {
+  max-width: 800px; /* Narrower than home page for a focused list view */
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 90vh;
+}
+
+.header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 900;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* The Yellow Accent Bar */
+.title::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 32px;
+  background: #ffb400;
+  border-radius: 10px;
+}
+
+.description {
+  color: #8e8e93;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* --- Wrapper for the Sidebar Component --- */
+.listWrapper {
+  background: #16161a;
+  border-radius: 20px;
+  padding: 10px; /* Slight padding around the component */
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .listWrapper {
+    background: transparent; /* Cleaner look on small screens */
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}

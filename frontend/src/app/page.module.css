@@ -168,3 +168,32 @@
   background: #ffb400;
   border-radius: 10px;
 }
+/* Find your sidebar class and add this media query at the bottom */
+@media (max-width: 900px) {
+  .sidebar {
+    display: none; /* This hides the 10 trending anime from the home page on mobile */
+  }
+
+  .leftColumn {
+    width: 100%; /* Make the main anime grid take full width */
+  }
+
+  .homeLayout {
+    grid-template-columns: 1fr; /* Stack everything into one column */
+  }
+}
+/* Find your .grid class and update the media query at the bottom */
+
+@media (max-width: 600px) {
+  .grid {
+    /* 140px allows 2 cards to fit perfectly on almost any phone */
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px; /* Smaller gap for mobile */
+    padding: 0 10px; /* Less side padding */
+  }
+
+  .categoryTitle {
+    font-size: 18px; /* Smaller title for mobile */
+    margin: 20px 0 15px 0;
+  }
+}

@@ -1,4 +1,5 @@
-export const BASE_URL = "http://127.0.0.1:5000";
+// MAKE SURE THERE IS NO SLASH AT THE END
+export const BASE_URL = "https://4jrjh39n-5000.inc1.devtunnels.ms";
 
 export const getImageUrl = (imagePath: string | undefined | null) => {
   if (!imagePath || imagePath === "") {

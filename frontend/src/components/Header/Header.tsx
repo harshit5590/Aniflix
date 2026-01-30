@@ -148,6 +148,7 @@ export default function Header() {
           {/* NAV LINKS */}
           <nav className={styles.nav}>
             <Link href="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+             <Link href="/trending" onClick={() => setMobileMenuOpen(false)}>🔥 Trending</Link>
             <Link href="/my-list" onClick={() => setMobileMenuOpen(false)}>My List</Link>
             <Link href="/genres" onClick={() => setMobileMenuOpen(false)}>Genres</Link>
             <Link href="/az-list/All" onClick={() => setMobileMenuOpen(false)}>A-Z List</Link>
