@@ -100,7 +100,7 @@ export default function Header() {
         
         {/* LOGO */}
         <Link href="/" className={styles.logo}>
-          Aniflix<span>TV</span>
+          Aniflix
         </Link>
 
         {/* MOBILE HAMBURGER */}
